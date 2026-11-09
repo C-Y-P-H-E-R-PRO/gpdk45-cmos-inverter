@@ -1,0 +1,7 @@
+Pegasus standalone ERC run record
+Run date: 2026-11-08
+Tool completion: Pegasus finished normally
+General ERC checks executed: 0
+General ERC results: 0
+Named contact soft-check results: psubstrate 0, nwell_conn 0, Nburied 0
+The named contact results and the general ERC check count are recorded separately.

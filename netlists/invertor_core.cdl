@@ -1,0 +1,6 @@
+* CMOS inverter core connectivity used for LVS
+.SUBCKT invertor_core VDD VSS Vin Vout
+*.PININFO Vin:I Vout:O VDD:B VSS:B
+MPM0 Vout Vin VDD VDD g45p1svt m=1 l=45n w=120n
+MNM0 Vout Vin VSS VSS g45n1svt m=1 l=45n w=120n
+.ENDS invertor_core

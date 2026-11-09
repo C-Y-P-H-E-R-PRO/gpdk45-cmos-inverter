@@ -1,0 +1,8 @@
+Pegasus DRC report excerpt
+Run date: 2026-11-08
+Top cell: invertor_core
+Total Original Geometry: 69 (69)
+Total DRC RuleChecks: 562
+Total DRC Results: 0 (0)
+All selected rules completed.
+Scope: exported layout, default enabled GPDK045 checks.

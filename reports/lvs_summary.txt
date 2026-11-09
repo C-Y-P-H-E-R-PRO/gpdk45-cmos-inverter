@@ -1,0 +1,12 @@
+Pegasus LVS comparison report excerpt
+Run date: 2026-11-08
+Top cell: invertor_core <vs> invertor_core
+Run Result: MATCH
+Cells matched: 1
+Cells which mismatch: 0
+Cells with parameter mismatches: 0
+Cells that have been blackboxed: 0
+PMOS: layout 1, schematic 1
+NMOS: layout 1, schematic 1
+Pins: layout 4, schematic 4
+Pin names: VDD, VSS, Vin, Vout

@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-08T23:33:40.566888+05:30",
+  "method": "Direct capture of the actual Cadence application windows. Saved designs opened read-only. ViVA plotted the existing DC result.",
+  "simulation_result": "perf/invertor ADE Explorer DC result recorded 2 November 2026",
+  "layout_scope": "Screenshot shows the saved layout opened read-only. DRC and LVS evidence refers to the previously exported GDS.",
+  "screenshots": {
+    "schematic.png": {
+      "original_capture": "virtuoso_core_schematic.png",
+      "description": "Actual Virtuoso core schematic window",
+      "dimensions": [
+        1920,
+        1048
+      ],
+      "sha256": "35a991b62b16224169cead0190ddd750217f29d3f575305d82fe939b8c6488bb"
+    },
+    "layout.png": {
+      "original_capture": "virtuoso_layout.png",
+      "description": "Actual Virtuoso saved layout window",
+      "dimensions": [
+        1920,
+        1048
+      ],
+      "sha256": "9f43aea90b8cf4a427af8cb0d18e7d656089ed0ee18782d14211d84766d8bab4"
+    },
+    "normal_testbench.png": {
+      "original_capture": "virtuoso_normal_inverter.png",
+      "description": "Actual Virtuoso normal inverter testbench window",
+      "dimensions": [
+        1920,
+        1048
+      ],
+      "sha256": "423be549dab4498100947a7d1fe1703a6b152e0ef99db660dd86c73061ee6ff6"
+    },
+    "dc_transfer.png": {
+      "original_capture": "viva_dc_transfer.png",
+      "description": "Actual Cadence ViVA DC waveform window",
+      "dimensions": [
+        1920,
+        1048
+      ],
+      "sha256": "66327cb19fc8720a524a2cc788b9aee58414ebf9937f96c239084c88af706585"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "project": "CMOS Inverter Design and Physical Verification",
+  "record_date": "2026-11-08",
+  "library": "perf",
+  "layout_cell": "invertor_core",
+  "simulation_cell": "invertor",
+  "devices": {
+    "NMOS": {
+      "model": "g45n1svt",
+      "W_nm": 120,
+      "L_nm": 45
+    },
+    "PMOS": {
+      "model": "g45p1svt",
+      "W_nm": 120,
+      "L_nm": 45
+    }
+  },
+  "simulation": {
+    "type": "schematic DC sweep",
+    "run_date": "2026-11-02",
+    "VDD_V": 1,
+    "VSS_V": 0,
+    "temperature_C": 27,
+    "Vin_start_V": 0,
+    "Vin_stop_V": 1,
+    "Vin_step_V": 0.01,
+    "samples": 101,
+    "model_section": "mc",
+    "initial_Vin_V": 0,
+    "save": "Vout",
+    "switching_point_V_estimate": 0.49541968872714065,
+    "switching_method": "linear interpolation of Vout minus Vin crossing zero",
+    "spectre_errors": 0,
+    "spectre_warnings": 0,
+    "measurement_scope": "Related perf/invertor schematic testbench with matching core model names and W/L."
+  },
+  "verification": {
+    "tool": "Pegasus 26.10-p012",
+    "drc_checks": 562,
+    "drc_results": 0,
+    "lvs": "MATCH",
+    "layout_devices": 2,
+    "schematic_devices": 2,
+    "matched_pins": [
+      "VDD",
+      "VSS",
+      "Vin",
+      "Vout"
+    ],
+    "parameter_mismatches": 0,
+    "erc_mode_completed": true,
+    "general_erc_checks": 0,
+    "general_erc_results": 0,
+    "contact_soft_checks": {
+      "psubstrate": 0,
+      "nwell_conn": 0,
+      "Nburied": 0
+    }
+  },
+  "scope": {
+    "layout": "Exported invertor_core GDS supplied to the recorded Pegasus DRC and LVS runs.",
+    "simulation": "Single schematic DC sweep of the perf/invertor testbench.",
+    "contact_checks": "Named contact soft checks psubstrate, nwell_conn and Nburied. The standalone general ERC check count is recorded separately."
+  }
+}

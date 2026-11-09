@@ -1,0 +1,18 @@
+{
+  "drc": {
+    "source_filename": "invertor_core.sum",
+    "sha256": "91e6482375e8fb785ccac5f0282ec600aeb9f74546d15d6cd1824c489878eb55"
+  },
+  "lvs": {
+    "source_filename": "invertor_core.rep.cls",
+    "sha256": "00aff0f33c01fff3575314c6aaa2a7ede85cbf02c4492a664b57f783d404f84c"
+  },
+  "erc": {
+    "source_filename": "invertor_core.sum",
+    "sha256": "b418149fb3c61054a0eb094f1b8d4a143aaf340d0bd26721e8d68245bcff1815"
+  },
+  "contacts": {
+    "source_filename": "invertor_core.ext.rep",
+    "sha256": "9d96191132931ae8cf67984698fc901019b6c1d1cd2070dfb694ef23b9aeccae"
+  }
+}

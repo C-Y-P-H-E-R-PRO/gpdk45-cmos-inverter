@@ -1,0 +1,6 @@
+Contact soft-check excerpt from the LVS extraction report
+Run date: 2026-11-08
+LVS_SOFTCHK psubstrate -TYPE CONTACT: Total Result 0 (0)
+LVS_SOFTCHK nwell_conn -TYPE CONTACT: Total Result 0 (0)
+LVS_SOFTCHK Nburied -TYPE CONTACT: Total Result 0 (0)
+These named contact checks are separate from the general ERC check count.

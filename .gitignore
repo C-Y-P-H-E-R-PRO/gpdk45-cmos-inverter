@@ -1,0 +1,20 @@
+runs/
+__pycache__/
+*.pyc
+*.log
+*.gds
+*.gds.gz
+*.oa
+*.cdslck
+cds.lib
+pvtech.lib
+models/
+pdk/
+license*
+cadence.dat
+
+# Owner-private report and checksum files
+/SHA256SUMS
+/PUBLIC_SHA256SUMS
+/docs/CMOS_Inverter_Report.*
+/private/
