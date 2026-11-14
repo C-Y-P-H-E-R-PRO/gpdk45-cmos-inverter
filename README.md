@@ -28,6 +28,10 @@ At 1 V, 25 °C and a 1 fF load, average delay increased by **8.90%** after extra
 
 Actual ViVA capture of the schematic input, output and supply current. The following supplementary plot compares schematic and extracted data.
 
+![Actual ViVA overview with extracted DC and transient results](assets/extracted_results_viva.png)
+
+Actual ViVA overview with both databases loaded; the lower pane shows extracted DC output, input and supply current on separate voltage/current scales.
+
 ![Post-layout transient comparison](assets/post_layout_transient.svg)
 
 Quantus generated 11 resistors and 12 capacitors and successfully created the extracted view. See the comparison notes for measurement conditions, convergence and device-property handling.
@@ -91,7 +95,7 @@ The [verification record](docs/verification_scope.md) describes the recorded run
 ## Project files
 
 - `docs/` contains the verification record and report access instructions.
-- `assets/` contains five actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
+- `assets/` contains six actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
 - `netlists/` contains the inverter core CDL, schematic baseline and extracted SPICE subcircuit.
 - `simulation/` contains the original DC data and ADE settings, plus final comparison decks, CSV data and manual commands.
 - `reports/` contains verification summaries, structured results and source hashes.

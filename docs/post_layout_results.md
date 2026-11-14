@@ -30,6 +30,12 @@ These plots are generated from the saved Spectre samples. They are supplementary
 
 Captured from the schematic `simulation/post_layout/runs/schematic/psf` database. The upper pane shows vout (red) and vin (yellow); the lower pane shows VSUP:p supply current (green, microamperes). This image shows the schematic run only, not an overlay with the extracted result. Negative supply-source current follows the source terminal reference direction and indicates current delivered by the supply during charging.
 
+## Actual ViVA results overview
+
+![Actual ViVA window with schematic and extracted databases loaded](../assets/extracted_results_viva.png)
+
+Both result databases are visible in the browser. The lower panel displays the extracted DC result: vout is green, vin is yellow and supply-source current is red on a separate current scale. The upper panels contain transient voltage and current traces. This is an actual results-browser overview; the mixed axes and full time span are not intended for reading propagation delay directly. Use the measured table and edge-detail plot for the timing comparison.
+
 ## Test conditions and measurement definitions
 
 Both circuits used VDD = 1 V, VSS = 0 V, 25 °C, the same GPDK045 model section `mc`, and a 1 fF external output load. The model section name does not denote a Monte Carlo run. The earlier archived DC test was at 27 °C; these new paired measurements are both at 25 °C to match the PEX setting.
