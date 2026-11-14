@@ -24,6 +24,10 @@ I designed a GPDK045 CMOS inverter in Virtuoso, verified its layout with Pegasus
 
 At 1 V, 25 °C and a 1 fF load, average delay increased by **8.90%** after extraction. Both final simulations completed with zero errors and zero warnings.
 
+![Actual schematic transient result in Cadence ViVA](assets/schematic_transient_viva.png)
+
+Actual ViVA capture of the schematic input, output and supply current. The following supplementary plot compares schematic and extracted data.
+
 ![Post-layout transient comparison](assets/post_layout_transient.svg)
 
 Quantus generated 11 resistors and 12 capacitors and successfully created the extracted view. See the comparison notes for measurement conditions, convergence and device-property handling.
@@ -87,7 +91,7 @@ The [verification record](docs/verification_scope.md) describes the recorded run
 ## Project files
 
 - `docs/` contains the verification record and report access instructions.
-- `assets/` contains four actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
+- `assets/` contains five actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
 - `netlists/` contains the inverter core CDL, schematic baseline and extracted SPICE subcircuit.
 - `simulation/` contains the original DC data and ADE settings, plus final comparison decks, CSV data and manual commands.
 - `reports/` contains verification summaries, structured results and source hashes.

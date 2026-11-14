@@ -24,6 +24,12 @@ The average propagation delay increased by **8.90%** under this test load. The D
 
 These plots are generated from the saved Spectre samples. They are supplementary data plots, not screenshots of ViVA. The original Virtuoso/ViVA screenshots remain in the main project.
 
+## Actual ViVA schematic transient screenshot
+
+![Schematic transient in ViVA: input, output and supply current](../assets/schematic_transient_viva.png)
+
+Captured from the schematic `simulation/post_layout/runs/schematic/psf` database. The upper pane shows vout (red) and vin (yellow); the lower pane shows VSUP:p supply current (green, microamperes). This image shows the schematic run only, not an overlay with the extracted result. Negative supply-source current follows the source terminal reference direction and indicates current delivered by the supply during charging.
+
 ## Test conditions and measurement definitions
 
 Both circuits used VDD = 1 V, VSS = 0 V, 25 °C, the same GPDK045 model section `mc`, and a 1 fF external output load. The model section name does not denote a Monte Carlo run. The earlier archived DC test was at 27 °C; these new paired measurements are both at 25 °C to match the PEX setting.
