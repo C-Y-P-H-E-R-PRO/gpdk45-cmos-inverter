@@ -25,3 +25,7 @@ The `perf/invertor` testbench uses the same transistor model names and dimension
 ## Project records
 
 `reports/provenance.json` records the filenames and SHA-256 hashes of the original verification reports. The full reports and GDS are kept in the local project archive. The screenshots show the actual saved Virtuoso views and the DC result plotted in ViVA.
+
+## Completed PEX and post-layout comparison
+
+On 14 November 2026, Quantus completed RC-decoupled extraction and created both SPICE output and the graphical extracted view. Matching schematic and extracted Spectre DC/transient tests completed with zero errors and zero warnings after removing unsupported redundant fw parameters from a simulation copy. See [post-layout results](post_layout_results.md) for the measurement table, convergence checks and scope.

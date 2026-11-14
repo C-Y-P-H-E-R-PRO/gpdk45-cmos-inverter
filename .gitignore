@@ -18,3 +18,9 @@ cadence.dat
 /PUBLIC_SHA256SUMS
 /docs/CMOS_Inverter_Report.*
 /private/
+
+# Local Spectre executions
+simulation/post_layout/*.local.scs
+simulation/post_layout/runs/
+simulation/post_layout/*.ahdlSimDB/
+simulation/post_layout/ahdlSimDB/

@@ -1,0 +1,6 @@
+Quantus 25.1.0-p047; 14 November 2026
+RC decoupled; typical; 25 degrees C; VSS reference
+11 resistors; 12 capacitors; 4 LVS nets; 0 floating nets
+SPICE output: Quantus terminated normally
+Extracted view av_extracted_rc: Extracted view creation has completed. Quantus terminated normally.
+Warnings and property handling are documented in docs/post_layout_results.md.

@@ -62,5 +62,128 @@
     "layout": "Exported invertor_core GDS supplied to the recorded Pegasus DRC and LVS runs.",
     "simulation": "Single schematic DC sweep of the perf/invertor testbench.",
     "contact_checks": "Named contact soft checks psubstrate, nwell_conn and Nburied. The standalone general ERC check count is recorded separately."
+  },
+  "project_status": "Practice scope completed 2026-11-14",
+  "post_layout": {
+    "date": "2026-11-14",
+    "conditions": {
+      "VDD_V": 1,
+      "temperature_C": 25,
+      "load_fF": 1,
+      "input_rise_fall_ps": 50,
+      "period_ns": 2,
+      "pulse_width_ns": 0.95,
+      "pulse_delay_ns": 1,
+      "stop_ns": 10,
+      "section": "mc",
+      "statistical_analysis": false,
+      "final_maxstep_ps": 1,
+      "final_DC_step_mV": 0.5,
+      "measurements": "Linear-interpolated 50% propagation crossings; 10-90% output slew; edges after 3ns and before 9ns; power from 5ns to 9ns"
+    },
+    "runs": {
+      "schematic": {
+        "VM_V": 0.4952195904581898,
+        "VIL_V": 0.44511022142715334,
+        "VIH_V": 0.545173956347492,
+        "NML_V": 0.4195223030016605,
+        "NMH_V": 0.4290097132082926,
+        "VOH_V": 0.9741836695557846,
+        "VOL_V": 0.02558791842549287,
+        "tpHL_ps": 29.265944154039914,
+        "tpLH_ps": 33.981173980805835,
+        "rise_10_90_ps": 37.56076188091989,
+        "fall_90_10_ps": 28.211317454274262,
+        "mean_delay_ps": 31.623559067422875,
+        "average_supply_power_uW": 0.5985276360246162
+      },
+      "pex": {
+        "VM_V": 0.4952206289859065,
+        "VIL_V": 0.44510266833922346,
+        "VIH_V": 0.5451827543102339,
+        "NML_V": 0.41948961238206467,
+        "NMH_V": 0.42897628203889626,
+        "VOH_V": 0.9741590363491301,
+        "VOL_V": 0.02561305595715881,
+        "tpHL_ps": 31.684850119036458,
+        "tpLH_ps": 37.19338600088541,
+        "rise_10_90_ps": 43.26909461521715,
+        "fall_90_10_ps": 32.31340711995035,
+        "mean_delay_ps": 34.43911805996093,
+        "average_supply_power_uW": 0.6919433877043687
+      },
+      "schematic_fine": {
+        "VM_V": 0.4952190850985277,
+        "VIL_V": 0.44512152984866643,
+        "VIH_V": 0.5451598758800816,
+        "NML_V": 0.419521863411041,
+        "NMH_V": 0.4290138469966873,
+        "VOH_V": 0.974173722876769,
+        "VOL_V": 0.02559966643762546,
+        "tpHL_ps": 29.26709330514342,
+        "tpLH_ps": 33.982759896693494,
+        "rise_10_90_ps": 37.53369358112399,
+        "fall_90_10_ps": 28.192438487409188,
+        "mean_delay_ps": 31.624926600918457,
+        "average_supply_power_uW": 0.5986265796653121
+      },
+      "pex_fine": {
+        "VM_V": 0.49522012136980137,
+        "VIL_V": 0.4451138212829478,
+        "VIH_V": 0.5451685094962938,
+        "NML_V": 0.4194889619442969,
+        "NMH_V": 0.4289806334911139,
+        "VOH_V": 0.9741491429874077,
+        "VOL_V": 0.025624859338650906,
+        "tpHL_ps": 31.685703387302194,
+        "tpLH_ps": 37.19430533228879,
+        "rise_10_90_ps": 43.24981901013845,
+        "fall_90_10_ps": 32.30179190589943,
+        "mean_delay_ps": 34.440004359795495,
+        "average_supply_power_uW": 0.6920416716460014
+      }
+    },
+    "convergence_percent": {
+      "schematic": {
+        "VM_V": 0.0001020476951159615,
+        "VIL_V": 0.0025405244983172414,
+        "VIH_V": 0.002582814332699961,
+        "NML_V": 0.00010478372114918342,
+        "NMH_V": 0.0009635559373290001,
+        "VOH_V": 0.0010210374989675396,
+        "VOL_V": 0.045891270346094026,
+        "tpHL_ps": 0.00392642717034941,
+        "tpLH_ps": 0.004666824862019956,
+        "rise_10_90_ps": 0.07211733568772152,
+        "fall_90_10_ps": 0.06696464682721777,
+        "mean_delay_ps": 0.00432422662300293,
+        "average_supply_power_uW": 0.016528440944130213
+      },
+      "pex": {
+        "VM_V": 0.00010250312603327438,
+        "VIL_V": 0.0025056386009738225,
+        "VIH_V": 0.0026129194353577082,
+        "NML_V": 0.00015505479923540568,
+        "NMH_V": 0.0010143703183644747,
+        "VOH_V": 0.0010155900452853681,
+        "VOL_V": 0.04606222940038774,
+        "tpHL_ps": 0.002692912495286449,
+        "tpLH_ps": 0.002471699350660463,
+        "rise_10_90_ps": 0.04456805951992156,
+        "fall_90_10_ps": 0.035958420154389915,
+        "mean_delay_ps": 0.00257346028561093,
+        "average_supply_power_uW": 0.014202026504983074
+      }
+    }
+  },
+  "pex": {
+    "tool": "Quantus 25.1.0-p047",
+    "type": "rc_decoupled",
+    "R": 11,
+    "C": 12,
+    "floating_nets": 0,
+    "extracted_view": "av_extracted_rc",
+    "spice_output": "completed",
+    "extracted_view_output": "completed"
   }
 }

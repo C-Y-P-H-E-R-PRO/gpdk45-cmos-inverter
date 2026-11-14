@@ -1,8 +1,33 @@
-# CMOS inverter design and physical verification
+# CMOS inverter: schematic to post-layout verification
 
 <!-- Attribution mark ◇ INVERTER-dfc6918a86b640769fed8c8d60504693 -->
 
-I built this CMOS inverter to practise schematic design, DC simulation and physical layout. I used GPDK045 in Cadence Virtuoso, simulated the circuit with Spectre, and checked the exported layout with Pegasus.
+**Practice project completed — 14 November 2026.**
+
+I designed a GPDK045 CMOS inverter in Virtuoso, verified its layout with Pegasus, extracted its parasitics with Quantus, and compared schematic and post-layout behavior in Spectre.
+
+[Post-layout results](docs/post_layout_results.md) · [Run the final simulations](simulation/post_layout/README.md)
+
+## Final schematic versus extracted comparison
+
+| Measurement | Schematic | Extracted |
+|---|---:|---:|
+| Switching voltage (V) | 0.495219 | 0.495220 |
+| Low noise margin (V) | 0.4195 | 0.4195 |
+| High noise margin (V) | 0.4290 | 0.4290 |
+| High-to-low delay (ps) | 29.27 | 31.69 |
+| Low-to-high delay (ps) | 33.98 | 37.19 |
+| Average propagation delay (ps) | 31.62 | 34.44 |
+| Output rise time (10–90%) (ps) | 37.53 | 43.25 |
+| Output fall time (90–10%) (ps) | 28.19 | 32.30 |
+| Average supply power (µW) | 0.599 | 0.692 |
+
+At 1 V, 25 °C and a 1 fF load, average delay increased by **8.90%** after extraction. Both final simulations completed with zero errors and zero warnings.
+
+![Post-layout transient comparison](assets/post_layout_transient.svg)
+
+Quantus generated 11 resistors and 12 capacitors and successfully created the extracted view. See the comparison notes for measurement conditions, convergence and device-property handling.
+
 
 [Request report access](docs/report_access.md) · [Simulation settings](simulation/ade_settings.md) · [Verification record](docs/verification_scope.md)
 
@@ -10,7 +35,7 @@ I built this CMOS inverter to practise schematic design, DC simulation and physi
 
 ## Full report
 
-The full report is kept in a private archive. [Request a copy](docs/report_access.md); the owner reviews each request before sharing the report.
+The original full report is kept in a private archive. The new post-layout completion results are documented in the public comparison linked above. [Request a copy](docs/report_access.md); the owner reviews each request before sharing the report.
 
 ## Results
 
@@ -62,9 +87,9 @@ The [verification record](docs/verification_scope.md) describes the recorded run
 ## Project files
 
 - `docs/` contains the verification record and report access instructions.
-- `assets/` contains four actual Virtuoso and ViVA screenshots and a supplementary SVG plot of the DC samples.
-- `netlists/` contains the inverter core CDL.
-- `simulation/` contains the DC data, ADE settings and Spectre testbench template.
+- `assets/` contains four actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
+- `netlists/` contains the inverter core CDL, schematic baseline and extracted SPICE subcircuit.
+- `simulation/` contains the original DC data and ADE settings, plus final comparison decks, CSV data and manual commands.
 - `reports/` contains verification summaries, structured results and source hashes.
 
 The PDK models and rule decks are supplied through the local Cadence and GPDK045 installation. The original GDS and full run logs are kept in the local project archive.
@@ -72,3 +97,7 @@ The PDK models and rule decks are supplied through the local Cadence and GPDK045
 ## What I learned
 
 This project helped me understand how schematic connections become physical routes. I practised gate access, supply routing and body contacts, then used the DRC markers and LVS report to check my work. The DC curve tied the device connections back to the inverter's voltage response.
+
+## Project closeout
+
+The planned practice flow is complete: schematic and symbol, custom layout, recorded DRC/LVS, RC extraction, and matched schematic/post-layout DC and transient characterization. Further sizing, PVT or load sweeps are possible extensions. This is a cell-level learning project, not a manufactured chip or fabrication signoff.

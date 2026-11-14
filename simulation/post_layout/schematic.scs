@@ -1,0 +1,14 @@
+simulator lang=spectre
+global 0
+parameters VDDVAL=1 VIN=0
+include "{{MODEL_FILE}}" section=mc
+include "../../netlists/schematic_baseline.scs"
+DUT (vdd 0 vin vout) inverter_schematic
+VSUP (vdd 0) vsource dc=VDDVAL
+VINP (vin 0) vsource dc=VIN type=pulse val0=0 val1=1 delay=1n rise=50p fall=50p width=950p period=2n
+CLOAD (vout 0) capacitor c=1f
+opts options temp=25 tnom=27 reltol=1e-6 vabstol=1e-8 iabstol=1e-15
+save vin vout VSUP:p
+saves options save=selected
+DC dc param=VIN start=0 stop=1 step=0.0005
+TRAN tran stop=10n maxstep=1p errpreset=conservative
