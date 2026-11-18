@@ -36,6 +36,25 @@ Captured from the schematic `simulation/post_layout/runs/schematic/psf` database
 
 Both result databases are visible in the browser. The lower panel displays the extracted DC result: vout is green, vin is yellow and supply-source current is red on a separate current scale. The upper panels contain transient voltage and current traces. This is an actual results-browser overview; the mixed axes and full time span are not intended for reading propagation delay directly. Use the measured table and edge-detail plot for the timing comparison.
 
+## Manual ADE Explorer run — 18 November 2026
+
+I completed the graphical post-layout simulation workflow using `perf/invertor_postlayout_tb/config`, with the inverter core bound to `av_extracted_rc`.
+
+![Actual testbench and post-layout waveforms in Virtuoso and ViVA](../assets/ade_postlayout_testbench_results.png)
+
+The upper-left pane shows input `/net1` in red and VDD `/net3` in magenta. The lower-left pane shows output `/net2` in green, switching opposite to the input. The upper-right pane shows the DC sweep with the output transitioning near 0.5 V. The right side shows the testbench schematic. This is an unmodified screenshot captured during my manual run.
+
+The generated netlist and Spectre log confirm:
+
+- Extracted core: two MOSFETs, 11 parasitic resistors and 12 parasitic capacitors, plus the external 1 fF load.
+- Fixed VDD: 1 V; temperature: 27 °C.
+- Input pulse: 0–1 V, 1 ns delay, 2 ns period and 50 ps rise/fall times. Pulse width was not explicitly specified in this generated netlist.
+- Transient: 0–10 ns, moderate accuracy and `traponly` integration.
+- DC: input variable `vin_dc` swept from 0 to 1 V in 0.01 V steps, with VDD held constant.
+- Run at 11:58 AM: completed with zero errors, zero warnings and 10 notices.
+
+This screenshot records functional DC and transient behavior through the extracted-view workflow. The precision timing and power table above belongs to the separate 14 November comparison, with its own settings; no new delay or power figures are inferred from this screenshot.
+
 ## Test conditions and measurement definitions
 
 Both circuits used VDD = 1 V, VSS = 0 V, 25 °C, the same GPDK045 model section `mc`, and a 1 fF external output load. The model section name does not denote a Monte Carlo run. The earlier archived DC test was at 27 °C; these new paired measurements are both at 25 °C to match the PEX setting.
@@ -48,7 +67,7 @@ Final maximum timestep was 1 ps. Tightening from 2 ps and reducing the DC step f
 
 ## Extraction and device-property checks
 
-Quantus 25.1.0-p047 completed RC-decoupled extraction: 11 parasitic resistors, 12 parasitic capacitors, four LVS nets and zero reported floating nets. Both SPICE output and the `av_extracted_rc` graphical view completed normally. Post-layout simulation used the SPICE subcircuit, not the graphical view.
+Quantus 25.1.0-p047 completed RC-decoupled extraction: 11 parasitic resistors, 12 parasitic capacitors, four LVS nets and zero reported floating nets. Both SPICE output and the `av_extracted_rc` graphical view completed normally. The 14 November measured comparison used the SPICE subcircuit. The 18 November ADE run used the graphical extracted view.
 
 The extracted netlist retains one `g45n1svt` and one `g45p1svt`, W = 120 nm and L = 45 nm, with body nodes VSS and VDD. Its external pin order is VDD VSS Vin Vout. Two exported `fw` parameters duplicated the width but were unsupported by the Spectre subcircuit wrappers; they were removed from the simulation copy. W/L, connectivity and all R/C values were retained. The raw export is preserved locally.
 

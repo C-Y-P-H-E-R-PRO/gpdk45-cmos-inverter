@@ -8,6 +8,14 @@ I designed a GPDK045 CMOS inverter in Virtuoso, verified its layout with Pegasus
 
 [Post-layout results](docs/post_layout_results.md) · [Run the final simulations](simulation/post_layout/README.md)
 
+## Post-layout simulation in ADE Explorer — 18 November 2026
+
+I ran the extracted inverter myself through ADE Explorer using the testbench configuration bound to `invertor_core/av_extracted_rc`. This actual screenshot shows my testbench alongside the DC and transient results in ViVA.
+
+![Actual ADE post-layout DC and transient results beside the inverter testbench](assets/ade_postlayout_testbench_results.png)
+
+Red `/net1` is Vin, green `/net2` is Vout, and magenta `/net3` is the fixed 1 V supply. The output switches opposite to the input over 10 ns; the DC plot shows the inverter transfer curve. Spectre completed this run with zero errors and zero warnings. This 27 °C GUI run is separate from the earlier 25 °C measured comparison below. [Run details](docs/post_layout_results.md#manual-ade-explorer-run--18-november-2026).
+
 ## Final schematic versus extracted comparison
 
 | Measurement | Schematic | Extracted |
@@ -95,7 +103,7 @@ The [verification record](docs/verification_scope.md) describes the recorded run
 ## Project files
 
 - `docs/` contains the verification record and report access instructions.
-- `assets/` contains six actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
+- `assets/` contains seven actual Virtuoso and ViVA screenshots plus supplementary SVG plots generated from simulation data.
 - `netlists/` contains the inverter core CDL, schematic baseline and extracted SPICE subcircuit.
 - `simulation/` contains the original DC data and ADE settings, plus final comparison decks, CSV data and manual commands.
 - `reports/` contains verification summaries, structured results and source hashes.
